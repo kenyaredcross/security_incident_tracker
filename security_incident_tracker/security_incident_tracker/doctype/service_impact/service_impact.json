@@ -1,0 +1,67 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-05 22:21:56.157136",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service",
+  "status",
+  "population_affected",
+  "location",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "service",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Service",
+   "options": "\nWater Supply\nHealth Services\nEducation\nMarkets\nTransport\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "\nFully Functional\nPartially Functional\nDisrupted\nNon-Functional",
+   "reqd": 1
+  },
+  {
+   "fieldname": "population_affected",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Population Affected",
+   "reqd": 1
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Location",
+   "options": "Incident Location",
+   "reqd": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-09 19:48:43.746847",
+ "modified_by": "Administrator",
+ "module": "Security Incident Tracker",
+ "name": "Service Impact",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

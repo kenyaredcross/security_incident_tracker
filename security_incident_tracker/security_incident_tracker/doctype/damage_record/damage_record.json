@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-05 22:17:15.390210",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "type_of_damage",
+  "description",
+  "count_affected",
+  "unit",
+  "location"
+ ],
+ "fields": [
+  {
+   "fieldname": "type_of_damage",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Type of Damage",
+   "options": "\nRoad\nBridge\nBuilding\nCommunication\nLivestock\nCrops\nOther"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Description"
+  },
+  {
+   "fieldname": "count_affected",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Count Affected"
+  },
+  {
+   "fieldname": "unit",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Unit",
+   "options": "\nKM\nPieces\nBuildings\nBridges\nLivestock"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Location",
+   "options": "Incident Location"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-07 21:25:23.045658",
+ "modified_by": "Administrator",
+ "module": "Security Incident Tracker",
+ "name": "Damage Record",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

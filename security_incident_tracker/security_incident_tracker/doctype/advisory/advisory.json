@@ -1,0 +1,93 @@
+{
+ "actions": [],
+ "autoname": "format:SEC-ADV-YY-MM-{####}",
+ "creation": "2025-09-05 22:28:06.056668",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "issued_time",
+  "advisory_type",
+  "audience",
+  "column_break_qwvq",
+  "effective_from",
+  "effective_to",
+  "section_break_cvka",
+  "location",
+  "section_break_ydci",
+  "message"
+ ],
+ "fields": [
+  {
+   "default": "Now",
+   "fieldname": "issued_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Issued Time"
+  },
+  {
+   "fieldname": "advisory_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Advisory Type",
+   "options": "Movement\nSafety\nCommunity\nStaff\nLogistics\nExternal"
+  },
+  {
+   "fieldname": "audience",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Audience",
+   "options": "\nPublic\nStaff\nVolunteers\nPartners\nAuthorities\nMedia"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Message"
+  },
+  {
+   "default": "Now",
+   "fieldname": "effective_from",
+   "fieldtype": "Datetime",
+   "label": "Effective From"
+  },
+  {
+   "fieldname": "effective_to",
+   "fieldtype": "Datetime",
+   "label": "Effective To"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Table",
+   "label": "Location",
+   "options": "Incident Location"
+  },
+  {
+   "fieldname": "column_break_qwvq",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_ydci",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_cvka",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-09 19:40:55.645239",
+ "modified_by": "Administrator",
+ "module": "Security Incident Tracker",
+ "name": "Advisory",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,136 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-05 22:04:46.801556",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "security_incident",
+  "sitrep_date",
+  "submitted_by",
+  "column_break_qqka",
+  "situation_trend",
+  "confidentiality",
+  "section_break_wxdz",
+  "summary",
+  "people_impact_section",
+  "people_impact",
+  "damages_section",
+  "damages",
+  "service_impact_section",
+  "table_pssz"
+ ],
+ "fields": [
+  {
+   "fieldname": "security_incident",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Security Incident",
+   "options": "Security Incident",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sitrep_date",
+   "fieldtype": "Date",
+   "label": "SitRep Date",
+   "reqd": 1
+  },
+  {
+   "default": "__user",
+   "fieldname": "submitted_by",
+   "fieldtype": "Link",
+   "label": "Submitted By",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Text Editor",
+   "label": "Summary",
+   "reqd": 1
+  },
+  {
+   "fieldname": "situation_trend",
+   "fieldtype": "Select",
+   "label": "Situation Trend",
+   "options": "\nInitial\nImproving\nStable\nDeteriorating",
+   "reqd": 1
+  },
+  {
+   "fieldname": "people_impact",
+   "fieldtype": "Table",
+   "label": "People Impact",
+   "options": "Impact Record"
+  },
+  {
+   "fieldname": "damages",
+   "fieldtype": "Table",
+   "label": "Damages",
+   "options": "Damage Record"
+  },
+  {
+   "fieldname": "table_pssz",
+   "fieldtype": "Table",
+   "label": "Service Impact",
+   "options": "Service Impact"
+  },
+  {
+   "fieldname": "confidentiality",
+   "fieldtype": "Select",
+   "label": "Confidentiality",
+   "options": "Internal\nRestricted\nPublic"
+  },
+  {
+   "fieldname": "column_break_qqka",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_wxdz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "people_impact_section",
+   "fieldtype": "Section Break",
+   "label": "People Impact"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "damages_section",
+   "fieldtype": "Section Break",
+   "label": "Damages"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "service_impact_section",
+   "fieldtype": "Section Break",
+   "label": "Service Impact"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-09-07 21:20:19.325151",
+ "modified_by": "Administrator",
+ "module": "Security Incident Tracker",
+ "name": "Security Incident SitRep",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}

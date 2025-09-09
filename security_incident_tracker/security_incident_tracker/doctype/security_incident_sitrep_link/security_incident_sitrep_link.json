@@ -1,0 +1,100 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-09-05 22:54:28.891493",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "sitrep",
+  "date_time",
+  "column_break_qitx",
+  "submitted_by",
+  "situation_trend",
+  "section_break_lacd",
+  "summary",
+  "section_break_vlyx",
+  "impacts",
+  "damages",
+  "service_impact"
+ ],
+ "fields": [
+  {
+   "fieldname": "sitrep",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "SitRep",
+   "options": "Security Incident SitRep"
+  },
+  {
+   "fieldname": "date_time",
+   "fieldtype": "Datetime",
+   "in_list_view": 1,
+   "label": "Date Time"
+  },
+  {
+   "default": "__user",
+   "fieldname": "submitted_by",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Submitted By",
+   "options": "User"
+  },
+  {
+   "fieldname": "summary",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Summary"
+  },
+  {
+   "fieldname": "situation_trend",
+   "fieldtype": "Select",
+   "label": "Situation Trend",
+   "options": "Improving\nStable\nDeteriorating"
+  },
+  {
+   "fieldname": "impacts",
+   "fieldtype": "Table",
+   "label": "Impacts",
+   "options": "Impact Record"
+  },
+  {
+   "fieldname": "section_break_vlyx",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "damages",
+   "fieldtype": "Table",
+   "label": "Damages",
+   "options": "Damage Record"
+  },
+  {
+   "fieldname": "service_impact",
+   "fieldtype": "Table",
+   "label": "Service Impact",
+   "options": "Service Impact"
+  },
+  {
+   "fieldname": "column_break_qitx",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_lacd",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2025-09-08 08:49:37.716392",
+ "modified_by": "Administrator",
+ "module": "Security Incident Tracker",
+ "name": "Security Incident SitRep Link",
+ "owner": "Administrator",
+ "permissions": [],
+ "row_format": "Dynamic",
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": []
+}
