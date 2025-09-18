@@ -7,10 +7,12 @@
  "engine": "InnoDB",
  "field_order": [
   "category",
-  "sex",
+  "gender",
   "age_group",
+  "column_break_look",
   "count",
   "location",
+  "section_break_szcp",
   "remarks"
  ],
  "fields": [
@@ -22,18 +24,11 @@
    "options": "\nInjuries\nFatalities\nMissing\nDisplacement\nGBV Incidents\nOther"
   },
   {
-   "fieldname": "sex",
-   "fieldtype": "Select",
-   "in_list_view": 1,
-   "label": "Sex",
-   "options": "\nMale\nFemale\nOther\nUnknown"
-  },
-  {
    "fieldname": "age_group",
    "fieldtype": "Select",
    "in_list_view": 1,
    "label": "Age Group",
-   "options": "\n0 - 5 Years\n6 - 17 Years\n18 - 59 Years\n60 + Years\nUnkown"
+   "options": "\nMinor\nYouth\nMiddle Aged\nElderly\nUnkown"
   },
   {
    "fieldname": "count",
@@ -52,13 +47,28 @@
    "fieldtype": "Link",
    "label": "Location",
    "options": "Incident Location"
+  },
+  {
+   "fieldname": "gender",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Gender",
+   "options": "\nMale\nFemale\nOther\nUnknown"
+  },
+  {
+   "fieldname": "column_break_look",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_szcp",
+   "fieldtype": "Section Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-09-07 21:26:57.903201",
+ "modified": "2025-09-18 12:44:29.511024",
  "modified_by": "Administrator",
  "module": "Security Incident Tracker",
  "name": "Impact Record",
