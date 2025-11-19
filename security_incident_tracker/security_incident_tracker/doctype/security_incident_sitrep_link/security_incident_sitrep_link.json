@@ -20,6 +20,7 @@
  ],
  "fields": [
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "sitrep",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -27,12 +28,14 @@
    "options": "Security Incident SitRep"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "date_time",
    "fieldtype": "Datetime",
    "in_list_view": 1,
    "label": "Date Time"
   },
   {
+   "allow_in_quick_entry": 1,
    "default": "__user",
    "fieldname": "submitted_by",
    "fieldtype": "Link",
@@ -47,6 +50,7 @@
    "label": "Summary"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "situation_trend",
    "fieldtype": "Select",
    "label": "Situation Trend",
@@ -59,6 +63,7 @@
    "options": "Impact Record"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "section_break_vlyx",
    "fieldtype": "Section Break"
   },
@@ -87,7 +92,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-09-08 08:49:37.716392",
+ "modified": "2025-10-15 19:18:39.740959",
  "modified_by": "Administrator",
  "module": "Security Incident Tracker",
  "name": "Security Incident SitRep Link",

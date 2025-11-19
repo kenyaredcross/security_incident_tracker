@@ -9,6 +9,7 @@
   "specific_location",
   "county",
   "sub_county",
+  "column_break_ffgx",
   "remarks"
  ],
  "fields": [
@@ -36,13 +37,17 @@
    "fieldtype": "Link",
    "label": "Sub County",
    "options": "Sub County"
+  },
+  {
+   "fieldname": "column_break_ffgx",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-10-14 08:07:38.828108",
+ "modified": "2025-10-15 20:00:26.876348",
  "modified_by": "Administrator",
  "module": "Security Incident Tracker",
  "name": "Incident Location",

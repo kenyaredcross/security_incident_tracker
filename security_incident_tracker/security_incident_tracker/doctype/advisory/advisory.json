@@ -3,7 +3,6 @@
  "autoname": "format:SEC-ADV-YY-MM-{####}",
  "creation": "2025-09-05 22:28:06.056668",
  "doctype": "DocType",
- "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
   "issued_time",
@@ -79,7 +78,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-09-09 19:40:55.645239",
+ "modified": "2025-11-19 09:00:52.139086",
  "modified_by": "Administrator",
  "module": "Security Incident Tracker",
  "name": "Advisory",

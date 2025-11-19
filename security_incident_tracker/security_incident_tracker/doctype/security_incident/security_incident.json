@@ -6,6 +6,7 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "is_internal",
   "name_of_incident",
   "start_date",
   "end_date",
@@ -22,8 +23,13 @@
   "incident_narative",
   "column_break_wugw",
   "situational_analysis",
+  "damage_report_section",
+  "column_break_wwan",
+  "damages",
   "section_break_iuud",
   "advisory",
+  "section_break_coza",
+  "sitrep2",
   "tab_break_kstq",
   "sitrep"
  ],
@@ -143,12 +149,45 @@
    "fieldtype": "Data",
    "label": "Specify Incident Act",
    "mandatory_depends_on": "eval:doc.act == \"Other\";"
+  },
+  {
+   "fieldname": "section_break_coza",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sitrep2",
+   "fieldtype": "Table",
+   "label": "SitRep2",
+   "options": "Security Incident SitRep Link"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_internal",
+   "fieldtype": "Check",
+   "label": "Is Internal"
+  },
+  {
+   "fieldname": "damage_report_section",
+   "fieldtype": "Section Break",
+   "label": "Damage Report"
+  },
+  {
+   "depends_on": "eval:doc.is_internal === 1",
+   "fieldname": "damages",
+   "fieldtype": "Table",
+   "label": "Damages",
+   "options": "Nature of Damage"
+  },
+  {
+   "depends_on": "eval:doc.is_internal === 1",
+   "fieldname": "column_break_wwan",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-09-09 19:44:42.016739",
+ "modified": "2025-11-19 08:58:06.124721",
  "modified_by": "Administrator",
  "module": "Security Incident Tracker",
  "name": "Security Incident",
