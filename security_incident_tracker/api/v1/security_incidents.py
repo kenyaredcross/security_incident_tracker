@@ -7,7 +7,7 @@ def get_security_incidents(limit=100):
         limit = int(limit)
 
         security_incidents = frappe.db.get_all(
-            "Security_Incident",
+            "Security Incident",
             fields=["name",
             "is_internal",
             "name_of_incident",
