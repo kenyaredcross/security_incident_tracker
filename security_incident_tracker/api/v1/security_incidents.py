@@ -76,7 +76,7 @@ def get_security_incidents(limit=100):
         
         # Sanitize the data to remove html tags
 
-        sanitize_output(security_incidents)            
+        security_incidents = sanitize_output(security_incidents)            
 
         return {"success": True, "data": security_incidents}
 
