@@ -18,8 +18,7 @@ def get_security_incidents(limit=100):
             "specify_incident_act",
             "severity",
             "status",
-            "incident_narative",
-            "advisory"            
+            "incident_narative",                      
             ], 
             limit = limit, 
             order_by="modified desc"        
@@ -45,7 +44,13 @@ def get_security_incidents(limit=100):
                 filters = {"parent": parent},
                 fields = ["sitrep", "submitted_by","situation_trend", "date_time", "summary"],
                 
-            )             
+            )
+
+            incident["advisory"] = frappe.db.get_all(
+                "Advisory", 
+                filters = {"parent": parent},
+                fields = ["issued_time", "advisory_type", "audience", "message"]
+            )            
         
 
         return {"success": True, "data": security_incidents}
