@@ -1,0 +1,56 @@
+import frappe
+from frappe import _
+
+@frappe.whitelist(allow_guest=False)
+def get_security_incidents(limit=100):
+    try:
+        limit = int(limit)
+
+        security_incidents = frappe.db.get_all(
+            "Security_Incident",
+            fields=["name",
+            "is_internal",
+            "name_of_incident",
+            "start_date",
+            "end_date",            
+            "incident_category",
+            "act",
+            "specify_incident_act",
+            "severity",
+            "status",
+            "incident_narative",
+            "advisory"            
+            ], 
+            limit = limit, 
+            order_by="modified desc"        
+
+        )
+
+        for incident in security_incidents:
+            parent = incident["name"]
+            incident["location"] = frappe.db.get_all (
+                "Incident Location",
+                filters={"parent": parent},
+                fields = ["specific_location", "county", "sub_county","remarks"]
+            )
+
+            incident["damage_report"] = frappe.db.get_all(
+                "Nature of Damage", filters = {"parent": parent}, 
+                fields = ["damages", "quantity", "description"]
+
+            ) 
+
+            incident["sitrep2"]  = frappe.db.get_all(
+                "Security Incident SitRep Link",
+                filters = {"parent": parent},
+                fields = ["sitrep", "submitted_by","situation_trend", "date_time", "summary"],
+                
+            )             
+        
+
+        return {"success": True, "data": security_incidents}
+
+
+    except Exception as e:
+        frappe.log_error(frappe.get_traceback(), "API get_security_incidents")
+        return {"success":False, "error": str(e)}

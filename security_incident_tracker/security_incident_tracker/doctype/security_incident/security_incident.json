@@ -25,7 +25,7 @@
   "situational_analysis",
   "damage_report_section",
   "column_break_wwan",
-  "damages",
+  "damage_report",
   "section_break_iuud",
   "advisory",
   "section_break_coza",
@@ -173,21 +173,21 @@
   },
   {
    "depends_on": "eval:doc.is_internal === 1",
-   "fieldname": "damages",
-   "fieldtype": "Table",
-   "label": "Damages",
-   "options": "Nature of Damage"
+   "fieldname": "column_break_wwan",
+   "fieldtype": "Column Break"
   },
   {
    "depends_on": "eval:doc.is_internal === 1",
-   "fieldname": "column_break_wwan",
-   "fieldtype": "Column Break"
+   "fieldname": "damage_report",
+   "fieldtype": "Table",
+   "label": "Damages",
+   "options": "Nature of Damage"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-11-19 08:58:06.124721",
+ "modified": "2025-11-25 22:28:47.846028",
  "modified_by": "Administrator",
  "module": "Security Incident Tracker",
  "name": "Security Incident",
