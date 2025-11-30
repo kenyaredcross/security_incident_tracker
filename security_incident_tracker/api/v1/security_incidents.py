@@ -1,5 +1,24 @@
 import frappe
 from frappe import _
+from frappe.utils import strip_html
+
+def sanitize_output(data):
+    """ Remove all HTML tags from a payload"""
+
+    if isinstance(data, dict):
+        return {k : sanitize_output(v) for k, v in data.items()}
+
+
+    elif isinstance(data, list):
+        return [sanitize_output(i) for i in data]
+    
+    elif isinstance(data, str):
+        return strip_html(data).strip()
+    
+
+    return data
+
+
 
 @frappe.whitelist(allow_guest=False)
 def get_security_incidents(limit=100):
@@ -49,9 +68,15 @@ def get_security_incidents(limit=100):
             incident["advisory"] = frappe.db.get_all(
                 "Advisory", 
                 filters = {"parent": parent},
-                fields = ["issued_time", "advisory_type", "audience", "message"]
-            )            
+                fields = ["issued_time", "advisory_type", "audience", "message"], 
+
+                
+            ) 
+
         
+        # Sanitize the data to remove html tags
+
+        sanitize_output(security_incidents)            
 
         return {"success": True, "data": security_incidents}
 
